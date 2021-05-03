@@ -1,0 +1,20 @@
+html, body {
+    height: 100%;margin: 0;
+    background: radial-gradient(circle farthest-corner at center, #fff 0%, #E0E0E0 100%);
+}
+#info_start{ /*# = Style the element with id="info_start": https://www.w3schools.com/cssref/sel_id.asp*/
+    font-size: 20px;
+}
+#div_start { /*# = Style the element with id="div_start": https://www.w3schools.com/cssref/sel_id.asp*/
+    margin-left:100px;
+}
+#left_box{
+    border:3px solid grey;
+    margin-left:20px;
+}
+#text_area{
+    margin-bottom: 10px;
+    border:3px solid grey;
+    border-radius:10px;
+}
+

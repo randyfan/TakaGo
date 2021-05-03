@@ -1,0 +1,2 @@
+docker build -t takagodocker .
+docker run --rm -p 6006:6006 takagodocker
