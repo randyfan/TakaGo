@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"net"
 	"net/http"
+	"os"
 	"path"
 	"text/template"
 )
@@ -77,13 +77,16 @@ func main() {
 
 	//http.ListenAndServe(":6006", nil)
 
-	//https://stackoverflow.com/questions/43424787/how-to-use-next-available-port-in-http-listenandserve
-	listener, err := net.Listen("tcp", ":0")
+	//https://gist.github.com/robinmonjo/5892893
+	port := os.Getenv("PORT")
+	if len(port) == 0 {
+		port = "9999"
+	}
+	fmt.Println("listening on port: ", port)
+	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
 		panic(err)
 	}
-
-	fmt.Println("Using port:", listener.Addr().(*net.TCPAddr).Port)
-
-	panic(http.Serve(listener, nil))
 }
+
+// https://levelup.gitconnected.com/deploying-a-simple-golang-webapp-on-heroku-4dbd00bc9b0e
