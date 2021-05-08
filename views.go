@@ -90,3 +90,5 @@ func main() {
 }
 
 // https://levelup.gitconnected.com/deploying-a-simple-golang-webapp-on-heroku-4dbd00bc9b0e
+// If cannot find that app:
+// https://stackoverflow.com/questions/53551717/couldnt-find-that-app-when-running-heroku-commands-in-console

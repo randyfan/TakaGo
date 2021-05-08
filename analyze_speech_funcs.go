@@ -142,7 +142,6 @@ func get_talking_speed(curr_utterance string, time_elapsed string) (float64, str
 	speech_text := "no text set. error in get_talking_speed()"
 	if words_per_sec > 2.91 {
 		color = "red"
-
 		speech_text = "Too fast"
 	} else if words_per_sec <= 2.91 && words_per_sec >= 1.91 {
 		color = "green"
